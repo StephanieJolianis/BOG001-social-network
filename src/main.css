@@ -1,0 +1,559 @@
+            body {
+                margin: 0%;
+            }
+            
+            .mainView1 {
+                background-image: url(img/backgroundView1.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .contentView1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .principalButtons {
+                display: flex;
+                flex-direction: column;
+                margin-top: 8%;
+                justify-content: space-around;
+                height: 100px;
+            }
+            
+            #login {
+                width: 285px;
+                height: 38px;
+                left: 38px;
+                top: 305px;
+                box-shadow: 0px 4.3937px 4.3937px rgba(0, 0, 0, 0.25);
+                border-radius: 21.9685px;
+                border-color: #F19048;
+                color: #F19048;
+                font-size: 20px;
+                font-family: Roboto;
+                text-decoration: none;
+            }
+            
+            #sign {
+                width: 285px;
+                height: 38px;
+                left: 38px;
+                top: 305px;
+                background: linear-gradient(270deg, #F1B048 0%, #DD5A6A 96.84%);
+                box-shadow: 0px 4.3937px 4.3937px rgba(0, 0, 0, 0.25);
+                border-radius: 21.9685px;
+                border-color: white;
+                color: white;
+                font-size: 20px;
+                font-family: Roboto;
+            }
+            
+            #aboutHiBook,
+            #contactUs {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: center;
+                color: rgba(0, 0, 0, 0.31);
+                margin-top: 12%;
+            }
+            
+            .mainText1 {
+                display: none;
+            }
+            
+            #imgView1Desktop {
+                display: none;
+            }
+            
+            #imgLogoViewDesktop1 {
+                display: none;
+            }
+            
+            .spanViewDesktop {
+                display: none;
+            }
+            
+            .mainView2 {
+                background-image: url(img/backgroundView2.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .mainView3 {
+                background-image: url(img/backgroundView3.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                position: absolute;
+                flex-direction: column;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .divBackgroundInputView2,
+            .divBackgroundInputView3 {
+                /* position: absolute; */
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                width: 254px;
+                height: 43px;
+                left: 45px;
+                top: 277px;
+                background: #FEFEFE;
+                border: 1px solid rgba(0, 0, 0, 0.12);
+                box-sizing: border-box;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 20px;
+            }
+            
+            .inputView2,
+            .inputView3 {
+                border: none;
+                outline: none;
+                font-family: roboto;
+                text-align: center;
+            }
+            
+            #loginView2 {
+                position: absolute;
+                width: 60px;
+                height: 28px;
+                left: 264px;
+                top: 215px;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 28px;
+                text-align: center;
+                color: #D6556B;
+            }
+            
+            #singUpView3 {
+                position: absolute;
+                width: 110px;
+                height: 28px;
+                left: 200px;
+                top: 180px;
+                font-family: Roboto;
+                font-size: 24px;
+                line-height: 28px;
+                text-align: center;
+                color: #D6556B;
+            }
+            
+            .spanView3 {
+                font-family: roboto;
+                color: #333333;
+            }
+            
+            #formView3 {
+                margin-top: 50px;
+            }
+            
+            #loginViewButton,
+            #signUpViewButton {
+                width: 254px;
+                height: 38px;
+                left: 38px;
+                top: 305px;
+                background: linear-gradient(270deg, #F1B048 0%, #DD5A6A 96.84%);
+                box-shadow: 0px 4.3937px 4.3937px rgba(0, 0, 0, 0.25);
+                border-radius: 21.9685px;
+                border-color: white;
+                color: white;
+                font-size: 20px;
+                font-family: Roboto;
+                margin-top: 50px;
+            }
+            
+            #logoView2 {
+                position: absolute;
+                left: 94px;
+                top: 33px;
+            }
+            
+            #formView2 {
+                margin-top: 200px;
+            }
+            
+            #socialMedia {
+                display: flex;
+                justify-content: space-around;
+                align-content: flex-end;
+                margin-top: 20px;
+            }
+            
+            #inputPasswordView2 {
+                margin-top: 10px;
+            }
+            
+            .spanCreateAccount {
+                font-family: roboto;
+                font-size: medium;
+            }
+            
+            #spanCreateAccFirst {
+                color: #969696;
+                font-weight: 500;
+            }
+            
+            #spanCreateAccSecond {
+                color: #DD5A6A;
+                font-weight: 700;
+            }
+            
+            #forgotView2 {
+                font-family: roboto;
+                color: #969696;
+                font-size: 12px;
+                margin-top: 10px;
+            }
+            
+            #passwordReminder {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            
+            #invalidPass {
+                position: absolute;
+                width: 70%;
+                text-align: center;
+                font-family: roboto;
+                font-size: x-small;
+                font-weight: 700;
+                color: #DD5A6A;
+            }
+            
+            .overlay {
+                background: rgba(0, 0, 0, 0.3);
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                visibility: hidden;
+            }
+            
+            .overlay.active {
+                visibility: visible;
+            }
+            
+            .popup {
+                background: white;
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+                border-radius: 5px;
+                font-family: 'Lora', Serif;
+                padding: 20px;
+                text-align: center;
+                width: 200px;
+            }
+            
+            .popup .btnClosePopup {
+                display: block;
+                text-align: right;
+                opacity: 60%;
+            }
+            
+            .popup .btnClosePopup:hover {
+                opacity: 100%
+            }
+            
+            .editPostArea {
+                display: none;
+            }
+            
+            #eyePassword {
+                width: 15px;
+                opacity: 50%;
+                height: 20px;
+                align-self: center;
+            }
+            
+            .deletePost {
+                display: none;
+            }
+            
+            .editPost {
+                display: none;
+            }
+            
+            #listPosts {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10vw;
+                color: #333333;
+            }
+            
+            .contentPost {
+                width: 80%;
+                margin-bottom: 5vw;
+            }
+            
+            .contentNameButton {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .divPost {
+                width: 100%;
+                align-items: center;
+                display: flex;
+                margin-top: 5vw;
+                flex-direction: column;
+            }
+            
+            .contentButtons {
+                display: flex;
+                justify-content: space-around;
+                width: 40%;
+            }
+            
+            #linePost {
+                width: 100%;
+            }
+            
+            #containerPost {
+                font-family: roboto, serif;
+            }
+            
+            #textPost {
+                font-family: 'Lora', Serif;
+            }
+            
+            #like {
+                width: 20px;
+            }
+            
+            #userInfoPost {
+                background: linear-gradient(270deg, #F1B048 0%, #DD5A6A 96.84%);
+                padding: 5%;
+                display: flex;
+                justify-content: space-around;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                z-index: 1000;
+            }
+            
+            #counterLikes {
+                font-size: small;
+                opacity: 50%;
+            }
+            
+            #contentLikes {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 23%;
+            }
+            
+            #userSessionName {
+                color: white;
+                font-weight: bold;
+            }
+            
+            #formPost {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            #save {
+                width: 20%;
+            }
+            
+            #textPost {
+                width: 98%;
+                border-color: #DD5A6A;
+            }
+            
+            #usernamePost {
+                font-weight: 600;
+            }
+            
+            .divViewPopUpDelete {
+                background: rgba(0, 0, 0, 0.3);
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                visibility: hidden;
+            }
+            
+            .divViewPopUpDelete.active {
+                visibility: visible;
+            }
+            
+            .deleteAlert {
+                background: white;
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+                border-radius: 5px;
+                font-family: 'Lora', Serif;
+                padding: 20px;
+                text-align: center;
+                width: 200px;
+            }
+            
+            .deleteAlert.btnCancel {
+                display: block;
+                text-align: right;
+            }
+            
+            @media screen and (min-width:800px) {
+                body {
+                    margin: 0;
+                }
+                .mainView1 {
+                    background-image: none;
+                    flex-direction: row-reverse;
+                    justify-content: space-around;
+                    position: relative;
+                }
+                .mainText1 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .footer {
+                    height: 100%;
+                    width: 50%;
+                    background: linear-gradient(152.68deg, #E46C54 0%, #FDB23D 99.27%);
+                }
+                .contentView1 {
+                    width: 50%;
+                }
+                .principalButtons {
+                    margin-top: 0%;
+                }
+                #spanView1 {
+                    font-size: 30px;
+                    color: #333333;
+                    Font-Family: 'Roboto', Sans-Serif;
+                    width: 60%;
+                    font-weight: 800;
+                }
+                #spanView2 {
+                    margin-top: 12%;
+                    Font-Family: 'Roboto', Sans-Serif;
+                    font-size: small;
+                    font-weight: 800;
+                    color: #333333;
+                }
+                #figureLogo {
+                    width: 60%;
+                }
+                #imgView1Desktop {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: 15%;
+                }
+                #imgLogoViewDesktop1 {
+                    display: flex;
+                    justify-content: center;
+                }
+                #imgLogoDesktop {
+                    width: 600px;
+                    opacity: 90%;
+                }
+                .imgView1 {
+                    width: 80px;
+                    height: 80px;
+                    margin: 3px;
+                }
+                .spanViewDesktop {
+                    display: block;
+                    width: 60%;
+                    margin-top: 1.8em;
+                    Font-Family: 'Roboto', Sans-Serif;
+                    color: white;
+                }
+                .contentImgView1 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .divImgView1 {
+                    display: flex;
+                    width: 60%;
+                }
+                .mainView2,
+                .mainView3 {
+                    background: white;
+                }
+                #contentView2,
+                #contentView3 {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    margin-top: 0px;
+                    padding: 50px;
+                    border: #F19048 2px solid;
+                    border-radius: 15px;
+                }
+                #formView2 {
+                    margin-top: 100px;
+                }
+                #logoView2 {
+                    position: relative;
+                    left: 0px;
+                    top: 0px;
+                }
+                #singUpView3 {
+                    position: relative;
+                    top: 30px;
+                    left: 0px;
+                }
+                #loginView2 {
+                    position: relative;
+                    top: 60px;
+                    left: 0px;
+                }
+                #faceButton {
+                    margin-right: 30px;
+                }
+                #invalidPass {
+                    position: absolute;
+                    left: 0px;
+                    width: 80%;
+                    font-size: small;
+                }
+            }
