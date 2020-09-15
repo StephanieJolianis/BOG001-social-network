@@ -3,7 +3,7 @@ import logoView3 from "../img/logo.png";
 import faceImg from "../img/facebook.png";
 import googleImg from "../img/google.png";
 import { pages } from "./pages.controller.js";
-import { auth } from "../init-firebase.js";
+import { auth, firebase } from "../init-firebase.js";
 
 export default () => {
 
@@ -35,18 +35,37 @@ export default () => {
         const signUpPassword = divElement.querySelector("#password").value;
         const signUpConfirmPassword = divElement.querySelector("#confirmPass").value;
 
+        const actionCodeSettings = { url: 'https://hibooklab.page.link/QXTh', dynamicLinkDomain: 'hibooklab.page.link' };
+
         if (signUpPassword === signUpConfirmPassword) {
             auth
                 .createUserWithEmailAndPassword(signUpEmail, signUpPassword)
                 .then(userCredentials => {
                     userCredentials.user.updateProfile({
-                        displayName: signUpUserName
-                    }).then(function() {
-                        window.location.href = "#/avatar";
-                    }).catch(function(error) {
-                        alert("Authentication Failed");
-                    });
+                            displayName: signUpUserName
+                        }).then(() => {
+                            const userVerfication = auth.currentUser;
+                            userVerfication.sendEmailVerification(actionCodeSettings)
+                                .then(() => {
+                                    alert("Email sent");
+                                })
+                        })
+                        .catch((error) => {
+                            alert("Authentication Failed");
+                        });
                 })
+
+
+
+
+            // const userVerfication = firebase.auth().currentUser;
+            // console.log(userVerfication);
+            // userVerfication.sendEmailVerification(actionCodeSettings).then(function() {
+            //     alert("Email sent");
+            // }).catch(function(error) {
+            //     alert("Authentication Failed");
+            // })
+
         } else {
             let spanInvalid = divElement.querySelector("#invalidPass");
             spanInvalid.textContent = "Your password and confirmation password do not match, please try again"
@@ -54,8 +73,9 @@ export default () => {
 
     })
 
+
     // Login FaceBook ------------------------------------------------------>
-    const signUpFacebook = divElement.querySelector("#signUpFace");
+    const signUpFacebook = divElement.querySelector("#faceButton");
     signUpFacebook.addEventListener("click", event => {
             event.preventDefault();
             const provider = new firebase.auth.FacebookAuthProvider();
@@ -74,11 +94,9 @@ export default () => {
                     let popupMessage = divElement.querySelector("#textPopup");
                     popupMessage.innerHTML = "Could not authenticate by facebook. Please try again";
                 })
-
-
         })
         // Login Google -------------------------------------------->
-    const signUpGoogle = divElement.querySelector("#signUpGoogle");
+    const signUpGoogle = divElement.querySelector("#googleButton");
     signUpGoogle.addEventListener("click", event => {
         event.preventDefault();
         const provider = new firebase.auth.GoogleAuthProvider();
@@ -88,6 +106,7 @@ export default () => {
                 console.log("Google signIn");
             })
             .catch(err => {
+                console.log(err);
                 let popupElement = divElement.querySelector("#divOverlay");
                 popupElement.classList.add("active");
 
@@ -95,9 +114,8 @@ export default () => {
                 popupTittle.innerHTML = "Error:";
 
                 let popupMessage = divElement.querySelector("#textPopup");
-                popupMessage.innerHTML = "Could not authenticate by Google. Please try again later";
+                popupMessage.innerHTML = "Could not authenticate by Google. Please try again";
             })
-
     })
     return divElement;
 }

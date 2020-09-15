@@ -2,7 +2,6 @@ import viewLogin from "../views/login.html";
 import logoImg from "../img/logo.png";
 import faceImg from "../img/facebook.png";
 import googleImg from "../img/google.png";
-import arrowBack from "../img/arrow-left.png";
 import eyeLogin from "../img/eyeLogin.png";
 import hideLogin from "../img/hideLogin.png"
 import { pages } from "./pages.controller.js";
@@ -29,9 +28,6 @@ export default () => {
     const imgGoogle = divElement.querySelector("#googleButton");
     imgGoogle.src = googleImg;
 
-    const imgBackBotton = divElement.querySelector("#back");
-    imgBackBotton.src = arrowBack;
-
     const imgEye = divElement.querySelector("#eyePassword");
     imgEye.src = hideLogin;
 
@@ -47,6 +43,7 @@ export default () => {
         auth
             .signInWithEmailAndPassword(email, password)
             .then(userCredentials => {
+                console.log(userCredentials);
                 window.location.href = "#/posts"
             }).catch(err => {
                 let popupElement = divElement.querySelector("#divOverlay");
@@ -56,12 +53,12 @@ export default () => {
                 popupTittle.innerHTML = "Error:";
 
                 let popupMessage = divElement.querySelector("#textPopup");
-                popupMessage.innerHTML = "Email or password does not exist. Please try again.";
+                popupMessage.innerHTML = err.message;
             })
     })
 
     // Login FaceBook ------------------------------------------------------>
-    const loginFacebook = divElement.querySelector("#loginFace");
+    const loginFacebook = divElement.querySelector("#faceButton");
     loginFacebook.addEventListener("click", event => {
             event.preventDefault();
             const provider = new firebase.auth.FacebookAuthProvider();
@@ -73,6 +70,7 @@ export default () => {
                     console.log("signIn facebook");
                 })
                 .catch(err => {
+                    console.log(err);
                     let popupElement = divElement.querySelector("#divOverlay");
                     popupElement.classList.add("active");
 
@@ -80,13 +78,13 @@ export default () => {
                     popupTittle.innerHTML = "Error:";
 
                     let popupMessage = divElement.querySelector("#textPopup");
-                    popupMessage.innerHTML = "Could not authenticate by facebook. Please try again";
+                    popupMessage.innerHTML = err.message;
                 })
 
 
         })
         // Login Google -------------------------------------------->
-    const loginGoogle = divElement.querySelector("#loginGoogle");
+    const loginGoogle = divElement.querySelector("#googleButton");
     loginGoogle.addEventListener("click", event => {
         event.preventDefault();
         const provider = new firebase.auth.GoogleAuthProvider();
@@ -97,6 +95,7 @@ export default () => {
                 console.log("Google signIn");
             })
             .catch(err => {
+                console.log(err);
                 let popupElement = divElement.querySelector("#divOverlay");
                 popupElement.classList.add("active");
 
@@ -104,7 +103,7 @@ export default () => {
                 popupTittle.innerHTML = "Error:";
 
                 let popupMessage = divElement.querySelector("#textPopup");
-                popupMessage.innerHTML = "Could not authenticate by Google. Please try again later";
+                popupMessage.innerHTML = err.message;
             })
 
     })
